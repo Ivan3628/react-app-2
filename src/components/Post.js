@@ -19,13 +19,7 @@ class Post extends Component {
     return (
       <div className="card card-body mb-3">
         <h4>
-          {title}{" "}
-          <i
-            className="fas fa-sort-down"
-            style={{ cursor: "pointer" }}
-            onClick={() => this.setState({ showInfo: !this.state.showInfo })}
-          />
-          <i
+        <i
             className="fas fa-times"
             style={{
               cursor: "pointer",
@@ -45,6 +39,13 @@ class Post extends Component {
               }}
             />
           </Link>
+          {title}{" "}
+          <i
+            className="fas fa-sort-down"
+            style={{ cursor: "pointer" }}
+            onClick={() => this.setState({ showInfo: !this.state.showInfo })}
+          />
+        
         </h4>
         {showInfo ? (
           <ul className="list-group">
